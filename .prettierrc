@@ -1,0 +1,17 @@
+{
+	"semi": false,
+	"singleQuote": true,
+	"esversion": 6,
+	"unused": true,
+	"indent": 2,
+	"eqeqeq": true,
+	"curly": true,
+	"immed": true,
+	"latedef": true,
+	"newcap": true,
+	"noempty": true,
+	"quotmark": "single",
+	"undef": true,
+	"trailing": true,
+	"browser": true
+}
