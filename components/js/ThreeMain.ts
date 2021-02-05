@@ -10,7 +10,7 @@ export default class ThreeMain {
   renderer: THREE.WebGLRenderer
   scene: THREE.Scene
   camera: THREE.PerspectiveCamera
-  stats: any
+  stats: Stats
   axesHelper: THREE.AxesHelper
   gridHelper: THREE.GridHelper
   controls: OrbitControls
