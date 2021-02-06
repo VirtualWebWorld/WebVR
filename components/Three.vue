@@ -1,6 +1,6 @@
 <template>
   <section class="artwork">
-    <canvas ref="canvas" class="canvas"></canvas>
+    <canvas ref="canvas" class="canvas" />
   </section>
 </template>
 
