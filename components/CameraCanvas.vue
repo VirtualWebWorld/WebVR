@@ -4,12 +4,13 @@
       <video ref="video" />
     </section>
     <section class="video">
-      <canvas ref="canvas" class="camera-c" />
+      <canvas ref="canvas" class="camera-c" width="400" height="200" />
     </section>
   </div>
 </template>
 
 <script>
+import { faceTracking } from './js/FaceTracking'
 export default {
   data() {
     return {
@@ -35,6 +36,7 @@ export default {
   methods: {
     cameraLoop() {
       this.canvasCtx.drawImage(this.$refs.video, 0, 0, 400, 200)
+      faceTracking(this.$refs.video)
       requestAnimationFrame(this.cameraLoop)
     },
   },

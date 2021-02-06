@@ -33,7 +33,14 @@ export default {
   modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: { cssSourceMap: false },
+  build: {
+    cssSourceMap: false,
+    extend(config) {
+      config.node = {
+        fs: 'empty',
+      }
+    },
+  },
 
   generate: {
     dir: 'dist',
