@@ -16,14 +16,16 @@ export default class Camera extends Vue {
     video: HTMLVideoElement
   }
 
+  /** data() */
+  cameraWidth: number = window.innerWidth
+  cameraHeight: number = window.innerHeight
+
   /** mounted() */
   async mounted() {
-    const cameraWidth = window.innerWidth
-    const cameraHeight = window.innerHeight
     const stream: HTMLVideoElement = await camera(
       this.$refs.video,
-      cameraWidth,
-      cameraHeight
+      this.cameraWidth,
+      this.cameraHeight
     )
     this.$store.commit('setVideo', stream)
   }
