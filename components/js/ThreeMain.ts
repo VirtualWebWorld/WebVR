@@ -1,10 +1,9 @@
 import * as THREE from 'three'
 import Stats from 'three/examples/jsm/libs/stats.module'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import VAvatar from './VAvatar'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 export default class ThreeMain {
-  canvas: any
+  canvas: HTMLCanvasElement
   height: number
   width: number
   renderer: THREE.WebGLRenderer
@@ -13,10 +12,9 @@ export default class ThreeMain {
   stats: Stats
   axesHelper: THREE.AxesHelper
   gridHelper: THREE.GridHelper
-  controls: OrbitControls
+  // controls: OrbitControls
   light: THREE.PointLight
   lightHelper: THREE.PointLightHelper
-  va: VAvatar
   constructor(properties: any) {
     this.canvas = properties.$canvas
     this.width = window.innerWidth
@@ -43,14 +41,10 @@ export default class ThreeMain {
     this.scene.add(this.axesHelper)
     this.gridHelper = new THREE.GridHelper(1000, 1000)
     this.scene.add(this.gridHelper)
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement)
+    // this.controls = new OrbitControls(this.camera, this.renderer.domElement)
     // this.controls.update()
 
     this.initialSetting()
-
-    this.va = new VAvatar(this.scene)
-
-    this.animate()
   }
 
   initialSetting() {
@@ -69,7 +63,6 @@ export default class ThreeMain {
   }
 
   animate() {
-    requestAnimationFrame(this.animate.bind(this))
     this.stats.update()
     // this.controls.update()
     this.renderer.render(this.scene, this.camera)

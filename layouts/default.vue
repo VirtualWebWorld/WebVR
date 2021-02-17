@@ -1,21 +1,6 @@
 <template>
-  <div>
-    <!-- <Three /> -->
-    <CameraCanvas />
-    <!-- <nuxt /> -->
-  </div>
+  <nuxt />
 </template>
-
-<script>
-import Three from '~/components/Three'
-import CameraCanvas from '~/components/CameraCanvas'
-export default {
-  components: {
-    Three,
-    CameraCanvas,
-  },
-}
-</script>
 
 <style lang="stylus">
 html, body, #__nuxt, #__layout, #__layout > div

@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
-    a
+  <div>
+    <Three />
+    <Camera />
   </div>
 </template>
