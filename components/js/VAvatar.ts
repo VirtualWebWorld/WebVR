@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { VRM } from '@pixiv/three-vrm'
+import { VRM, VRMSchema } from '@pixiv/three-vrm'
 
 export default class VAvatar {
   loader: GLTFLoader
@@ -16,6 +16,14 @@ export default class VAvatar {
     await VRM.from(gltf).then((vrm) => {
       this.scene.add(vrm.scene)
       vrm.scene.rotation.y = Math.PI
+      vrm.humanoid!.setPose({
+        [VRMSchema.HumanoidBoneName.LeftUpperArm]: {
+          rotation: [0, 0, 0.5, 1],
+        },
+        [VRMSchema.HumanoidBoneName.RightUpperArm]: {
+          rotation: [0, 0, -0.5, 1],
+        },
+      })
       this.vrm = vrm
     })
     console.log('load complites')

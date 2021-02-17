@@ -7,14 +7,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Ref, Vue } from 'nuxt-property-decorator'
 import camera from './js/camera'
 
 @Component({})
 export default class Camera extends Vue {
-  $refs!: {
-    video: HTMLVideoElement
-  }
+  @Ref() video!: HTMLVideoElement
 
   /** data() */
   cameraWidth: number = window.innerWidth
@@ -23,7 +21,7 @@ export default class Camera extends Vue {
   /** mounted() */
   async mounted() {
     const stream: HTMLVideoElement = await camera(
-      this.$refs.video,
+      this.video,
       this.cameraWidth,
       this.cameraHeight
     )

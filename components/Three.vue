@@ -5,13 +5,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Watch, Vue } from 'nuxt-property-decorator'
+import { Component, Ref, Watch, Vue } from 'nuxt-property-decorator'
 import ThreeMain from './js/ThreeMain'
 import Facepoint from './js/Facepoint'
 import VAvatar from './js/VAvatar'
 
 @Component({})
 export default class Three extends Vue {
+  @Ref() canvas!: HTMLCanvasElement
+
   /** data() */
   videoElement!: HTMLVideoElement
   threeMain!: ThreeMain
@@ -26,7 +28,7 @@ export default class Three extends Vue {
 
   /** watch() */
   @Watch('video')
-  public videoStart(element: HTMLVideoElement) {
+  videoStart(element: HTMLVideoElement) {
     this.videoElement = element
     this.loop()
     console.log('loop start')
@@ -34,9 +36,7 @@ export default class Three extends Vue {
 
   /** mounted() */
   async mounted() {
-    this.threeMain = new ThreeMain({
-      $canvas: this.$refs.canvas,
-    })
+    this.threeMain = new ThreeMain(this.canvas)
     this.va = new VAvatar(this.threeMain.scene)
     await this.va.loadAvater()
     this.facepoint = new Facepoint(this.va.vrm)
