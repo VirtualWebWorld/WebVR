@@ -1,18 +1,6 @@
 <template>
-  <div>
-    <Three />
-    <!-- <nuxt /> -->
-  </div>
+  <nuxt />
 </template>
-
-<script>
-import Three from '~/components/Three'
-export default {
-  components: {
-    Three,
-  },
-}
-</script>
 
 <style lang="stylus">
 html, body, #__nuxt, #__layout, #__layout > div
