@@ -53,7 +53,7 @@ export default class Loading extends Vue {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 lbw = 200px
 lbh = 10px
 
