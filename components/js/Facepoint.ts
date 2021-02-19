@@ -13,7 +13,6 @@ export default class Facepoint {
     this.model = await FLD.load(FLD.SupportedPackages.mediapipeFacemesh, {
       maxFaces: 1,
     })
-    console.log('load model complete')
   }
 
   async animate(video: HTMLVideoElement) {

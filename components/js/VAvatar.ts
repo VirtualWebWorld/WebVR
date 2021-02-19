@@ -26,7 +26,6 @@ export default class VAvatar {
       })
       this.vrm = vrm
     })
-    console.log('load complites')
   }
 
   loadVRM(): Promise<any> {

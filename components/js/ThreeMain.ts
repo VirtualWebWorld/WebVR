@@ -51,7 +51,7 @@ export default class ThreeMain {
     this.renderer.setPixelRatio(window.devicePixelRatio)
     this.renderer.setSize(this.width, this.height)
 
-    this.camera.position.set(0, 1.3, 1.5)
+    this.camera.position.set(0, 1.2, 0.5)
 
     this.stats.showPanel(0)
     this.stats.domElement.style.position = 'absolute'

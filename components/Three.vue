@@ -1,7 +1,7 @@
 <template>
-  <section class="artwork">
+  <div class="artwork">
     <canvas ref="canvas" class="canvas" />
-  </section>
+  </div>
 </template>
 
 <script lang="ts">
@@ -31,18 +31,22 @@ export default class Three extends Vue {
   videoStart(element: HTMLVideoElement) {
     this.videoElement = element
     this.loop()
-    console.log('loop start')
+    this.$store.commit('loadCount')
   }
 
   /** mounted() */
   async mounted() {
     this.threeMain = new ThreeMain(this.canvas)
+
     this.va = new VAvatar(this.threeMain.scene)
     await this.va.loadAvater()
+    this.$store.commit('loadCount')
+
     this.facepoint = new Facepoint(this.va.vrm)
     await this.facepoint.setup()
+    this.$store.commit('loadCount')
+
     this.loadFlag = true
-    console.log('loadFlag true')
   }
 
   /** methods() */
@@ -61,4 +65,5 @@ export default class Three extends Vue {
   position absolute
   top 0
   left 0
+  z-index -1
 </style>

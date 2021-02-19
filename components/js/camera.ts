@@ -5,7 +5,6 @@ const camera = async (
 ) => {
   const video: HTMLVideoElement = await setupCamera(element, width, height)
   video.play()
-  console.log('camera on')
   return video
 }
 

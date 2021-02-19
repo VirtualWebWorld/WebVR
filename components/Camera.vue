@@ -26,6 +26,7 @@ export default class Camera extends Vue {
       this.cameraHeight
     )
     this.$store.commit('setVideo', stream)
+    this.$store.commit('loadCount')
   }
 }
 </script>
