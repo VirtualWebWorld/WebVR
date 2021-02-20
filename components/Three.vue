@@ -1,7 +1,5 @@
 <template>
-  <div class="artwork">
-    <canvas ref="canvas" class="canvas" />
-  </div>
+  <canvas ref="canvas" class="canvas" />
 </template>
 
 <script lang="ts">

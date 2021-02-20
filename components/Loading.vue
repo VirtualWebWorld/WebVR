@@ -38,7 +38,7 @@ export default class Loading extends Vue {
   /** watch() */
   @Watch('load')
   loadWatch(num: number) {
-    this.loadDone++
+    this.loadDone = num
     const par = (num / this.loadNum) * 100
     this.lbf.style.clipPath = 'inset(0 0 0 ' + par + '%)'
     if (num === this.loadNum) {
