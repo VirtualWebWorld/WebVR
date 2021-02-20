@@ -1,7 +1,8 @@
 <template>
   <div>
-    <Three />
     <Camera />
+    <Three />
+    <Pixi />
     <Loading />
   </div>
 </template>
