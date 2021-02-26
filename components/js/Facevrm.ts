@@ -74,7 +74,7 @@ export default class Facevrm {
     const aLip = this.euclideanDist(an.lipsUpperInner[6], an.lipsLowerInner[6])
     const bLip = this.euclideanDist(an.lipsLowerInner[0], an.lipsLowerInner[10])
     const lipWidth = aLip / (2 * bLip)
-    let lipRatio = this.numComplement(lipWidth, 0.1, 0.2)
+    let lipRatio = this.numComplement(lipWidth, 0.08, 0.18)
     lipRatio = lipRatio < 0 ? 0 : lipRatio > 1 ? 1 : lipRatio
 
     this.currentVRM.blendShapeProxy!.setValue(

@@ -10,8 +10,8 @@ export default class ThreeMain {
   scene: THREE.Scene
   camera: THREE.PerspectiveCamera
   stats: Stats
-  axesHelper: THREE.AxesHelper
-  gridHelper: THREE.GridHelper
+  // axesHelper: THREE.AxesHelper
+  // gridHelper: THREE.GridHelper
   // controls: OrbitControls
   light: THREE.PointLight
   lightHelper: THREE.PointLightHelper
@@ -37,10 +37,10 @@ export default class ThreeMain {
     this.lightHelper = new THREE.PointLightHelper(this.light)
     this.scene.add(this.lightHelper)
     this.stats = Stats()
-    this.axesHelper = new THREE.AxesHelper(10000)
-    this.scene.add(this.axesHelper)
-    this.gridHelper = new THREE.GridHelper(1000, 1000)
-    this.scene.add(this.gridHelper)
+    // this.axesHelper = new THREE.AxesHelper(10000)
+    // this.scene.add(this.axesHelper)
+    // this.gridHelper = new THREE.GridHelper(1000, 1000)
+    // this.scene.add(this.gridHelper)
     // this.controls = new OrbitControls(this.camera, this.renderer.domElement)
     // this.controls.update()
 
