@@ -74,7 +74,7 @@ export default class Facevrm {
     const aLip = this.euclideanDist(an.lipsUpperInner[6], an.lipsLowerInner[6])
     const bLip = this.euclideanDist(an.lipsLowerInner[0], an.lipsLowerInner[10])
     const lipWidth = aLip / (2 * bLip)
-    let lipRatio = this.numComplement(lipWidth, 0.1, 0.2)
+    let lipRatio = this.numComplement(lipWidth, 0.08, 0.18) // Mouth opening width
     lipRatio = lipRatio < 0 ? 0 : lipRatio > 1 ? 1 : lipRatio
 
     this.currentVRM.blendShapeProxy!.setValue(
@@ -87,7 +87,7 @@ export default class Facevrm {
     const aEyeR = this.euclideanDist(an.rightEyeUpper0[3], an.rightEyeLower0[4])
     const bEyeR = this.euclideanDist(an.rightEyeLower0[0], an.rightEyeLower0[8])
     const rEyeWidth = aEyeR / (2 * bEyeR)
-    let rEyeRatio = 1 - this.numComplement(rEyeWidth, 0.08, 0.12)
+    let rEyeRatio = 1 - this.numComplement(rEyeWidth, 0.08, 0.12) // Eye opening width
     rEyeRatio = rEyeRatio < 0 ? 0 : rEyeRatio > 1 ? 1 : rEyeRatio
     this.currentVRM.blendShapeProxy!.setValue(
       VRMSchema.BlendShapePresetName.BlinkR,
@@ -99,7 +99,7 @@ export default class Facevrm {
     const aEyeL = this.euclideanDist(an.leftEyeUpper0[3], an.leftEyeLower0[4])
     const bEyeL = this.euclideanDist(an.leftEyeLower0[0], an.leftEyeLower0[8])
     const lEyeWidth = aEyeL / (2 * bEyeL)
-    let lEyeRatio = 1 - this.numComplement(lEyeWidth, 0.08, 0.12)
+    let lEyeRatio = 1 - this.numComplement(lEyeWidth, 0.08, 0.12) // Eye opening width
     lEyeRatio = lEyeRatio < 0 ? 0 : lEyeRatio > 1 ? 1 : lEyeRatio
     this.currentVRM.blendShapeProxy!.setValue(
       VRMSchema.BlendShapePresetName.BlinkL,
