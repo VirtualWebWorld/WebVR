@@ -90,3 +90,5 @@ sw.*
 *.swp
 
 static/*.vrm
+package-lock.json
+yarn.lock
