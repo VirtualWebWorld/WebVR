@@ -4,7 +4,7 @@ export default class PixiMain {
   width: number
   height: number
   stage: PIXI.Container
-  renderer: PIXI.Renderer
+  renderer: PIXI.AbstractRenderer
   textArr: string[]
   taNum: number
   textObj: PIXI.Text
