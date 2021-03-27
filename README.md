@@ -1,6 +1,6 @@
 # WebVR
 
-web上でVRっぽいことができる
+web上でVtuberっぽいことができる
 
 ## 使用方法
 
