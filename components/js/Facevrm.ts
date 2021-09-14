@@ -90,7 +90,7 @@ export default class Facevrm {
     let rEyeRatio = 1 - this.numComplement(rEyeWidth, 0.08, 0.12) // Eye opening width
     rEyeRatio = rEyeRatio < 0 ? 0 : rEyeRatio > 1 ? 1 : rEyeRatio
     this.currentVRM.blendShapeProxy!.setValue(
-      VRMSchema.BlendShapePresetName.BlinkR,
+      VRMSchema.BlendShapePresetName.BlinkL,
       rEyeRatio,
     )
   }
@@ -102,7 +102,7 @@ export default class Facevrm {
     let lEyeRatio = 1 - this.numComplement(lEyeWidth, 0.08, 0.12) // Eye opening width
     lEyeRatio = lEyeRatio < 0 ? 0 : lEyeRatio > 1 ? 1 : lEyeRatio
     this.currentVRM.blendShapeProxy!.setValue(
-      VRMSchema.BlendShapePresetName.BlinkL,
+      VRMSchema.BlendShapePresetName.BlinkR,
       lEyeRatio,
     )
   }
