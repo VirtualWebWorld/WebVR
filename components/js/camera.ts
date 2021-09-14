@@ -1,7 +1,7 @@
 const camera = async (
   element: HTMLVideoElement,
   width: number,
-  height: number
+  height: number,
 ) => {
   const video: HTMLVideoElement = await setupCamera(element, width, height)
   video.play()
@@ -11,7 +11,7 @@ const camera = async (
 const setupCamera = async (
   element: HTMLVideoElement,
   width: number,
-  height: number
+  height: number,
 ): Promise<HTMLVideoElement> => {
   const stream = await navigator.mediaDevices.getUserMedia({
     audio: false,

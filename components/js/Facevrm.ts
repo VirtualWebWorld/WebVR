@@ -59,7 +59,7 @@ export default class Facevrm {
     }
 
     const head = this.currentVRM.humanoid!.getBoneNode(
-      VRMSchema.HumanoidBoneName.Head
+      VRMSchema.HumanoidBoneName.Head,
     )
     head!.rotation.set(yaw + Math.PI, pitch, -(roll - Math.PI / 2), 'XYZ')
   }
@@ -79,7 +79,7 @@ export default class Facevrm {
 
     this.currentVRM.blendShapeProxy!.setValue(
       VRMSchema.BlendShapePresetName.A,
-      lipRatio
+      lipRatio,
     )
   }
 
@@ -91,7 +91,7 @@ export default class Facevrm {
     rEyeRatio = rEyeRatio < 0 ? 0 : rEyeRatio > 1 ? 1 : rEyeRatio
     this.currentVRM.blendShapeProxy!.setValue(
       VRMSchema.BlendShapePresetName.BlinkR,
-      rEyeRatio
+      rEyeRatio,
     )
   }
 
@@ -103,7 +103,7 @@ export default class Facevrm {
     lEyeRatio = lEyeRatio < 0 ? 0 : lEyeRatio > 1 ? 1 : lEyeRatio
     this.currentVRM.blendShapeProxy!.setValue(
       VRMSchema.BlendShapePresetName.BlinkL,
-      lEyeRatio
+      lEyeRatio,
     )
   }
 

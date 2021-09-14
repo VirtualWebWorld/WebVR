@@ -28,7 +28,7 @@ export default class ThreeMain {
       45,
       this.width / this.height,
       0.1,
-      10000
+      10000,
     )
     // eslint-disable-next-line unicorn/number-literal-case
     this.light = new THREE.PointLight(0xffffff, 2, 50, 1)

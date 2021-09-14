@@ -17,7 +17,7 @@ export default class PixiMain {
       height: this.height,
       resolution: 1,
       antialias: true,
-      transparent: true,
+      backgroundAlpha: 1,
     })
     element.appendChild(this.renderer.view)
 
@@ -28,7 +28,7 @@ export default class PixiMain {
       if (e.key === 'Enter') {
         this.addText(
           this.textObj,
-          this.textArr[this.taNum % this.textArr.length]
+          this.textArr[this.taNum % this.textArr.length],
         )
         this.taNum++
       }

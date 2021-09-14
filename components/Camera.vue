@@ -23,7 +23,7 @@ export default class Camera extends Vue {
     const stream: HTMLVideoElement = await camera(
       this.video,
       this.cameraWidth,
-      this.cameraHeight
+      this.cameraHeight,
     )
     this.$store.commit('setVideo', stream)
     this.$store.commit('loadCount')

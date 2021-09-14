@@ -39,9 +39,9 @@ export default class VAvatar {
           console.log(
             'Loading model...',
             100.0 * (progress.loaded / progress.total),
-            '%'
+            '%',
           ),
-        (error) => console.error(error)
+        (error) => console.error(error),
       )
     })
   }
